@@ -1,0 +1,12 @@
+{
+  "hosting": {
+    "site": "shutlr-82193-b0b95",
+    "public": "JS Vanilla",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+  
+}

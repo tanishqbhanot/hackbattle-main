@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | SignUp</title>
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <div class="background">
+      <div></div>
+      <div class="ult-container">
+        <div class="div1">
+          <a href="homepage.html" class="link-style">
+            <div class="line"></div>
+            <div class="curved-line"></div>
+            <p>SHUTL<sup>r</sup></p>
+          </a>
+        </div>
+        <div class="baby-container">
+          <div></div>
+          <div class="search">
+            <input type="email" class="reg" id="email" placeholder="E-mail">
+            <input type="password" class="pass" id="password" placeholder="Password">
+            <div class="buttons">
+              <button class="log-but" onclick="
+                login();  
+              "><a href="localhost:3000"></a>"></a>Login</button>
+              <button class="reg-but" onclick="
+                register();
+                saveData();
+              ">Sign Up</a></button>
+              <button></a>
+                MAPS
+              </button>
+              <!-- <button onclick="
+                saveData();
+              ">Save Data</button>
+
+              <button onclick="
+                readData();
+              ">Read Data</button>
+              
+              <button onclick="
+                updateData();
+              ">Update Data</button> -->
+            </div>
+          </div>
+          <div></div>
+        </div>
+      </div>
+      <div></div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-auth-compat.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
