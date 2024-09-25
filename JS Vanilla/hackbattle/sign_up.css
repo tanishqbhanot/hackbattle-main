@@ -1,0 +1,205 @@
+.ult-container {
+    background-color: rgb(191, 225, 237);
+    margin-top: 100px;
+    height: 600px;
+    width: 800px;
+    border-radius: 20px;
+
+}
+
+
+.background {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(120deg, #99f7fa, #ab47bc, #ffeb3b);
+    clip-path: ellipse(90% 75% at 50% 25%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.baby-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.link-style {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.div1 {
+    opacity: 0;
+    text-align: center;
+    font-size: 80px;
+    color: rgb(255, 255, 255);
+    animation-name: slideInLeft;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+    animation-delay: 0.8s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+
+.reg {
+    margin-top: 15px;
+}
+
+.reg,
+.pass {
+    height: 40px;
+    width: 500px;
+    margin-bottom: 20px;
+    background-color: rgb(255, 251, 251);
+    border: none;
+    transition: box-shadow ease 0.5s;
+    opacity: 0;
+    transform: translateY(300px);
+
+}
+
+.pass {
+    animation-name: slideInTop;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-delay: 0.4s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+
+.reg {
+    animation-name: slideInTop;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-delay: 0.2s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+
+.reg:placeholder,
+.pass:placeholder {
+    padding-left: 10px;
+
+}
+
+
+.reg:hover,
+.pass:hover {
+    box-shadow: 0px 1.5px 8px;
+    cursor: pointer;
+
+}
+
+.reg:focus,
+.pass:focus {
+    font-family: Arial;
+    outline: none;
+    caret-color: transparent;
+}
+
+.buttons {
+    opacity: 0;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    animation-name: slideInTop;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-delay: 0.6s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+
+.log-but,
+.reg-but {
+    height: 50px;
+    margin-right: 10px;
+    border: none;
+    animation-name: slideInTop;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.log-but {
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    transition: background-color smooth 0.69s;
+    transition-property: transform;
+    transition-duration: 0.4s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+}
+
+.log-but:hover {
+    transform: translateY(-5px);
+    background-color: rgb(42, 42, 42);
+
+    cursor: pointer;
+    box-shadow: 1px 0.5px 0.5px black;
+
+}
+
+.log-but:active {
+    background-color: rgb(116, 113, 113);
+}
+
+.reg-but {
+    color: black;
+    font-size: 20px;
+    background-color: rgb(255, 255, 255);
+    transition-property: transform;
+    transition-duration: 0.4s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+
+}
+
+.reg-but:hover {
+    background-color: rgb(243, 240, 240);
+    box-shadow: 1.2 1px 0.5px;
+    cursor: pointer;
+    transform: translateY(-5px);
+}
+
+.reg-but:active {
+    background-color: rgb(207, 205, 205);
+}
+
+.anchor {
+    text-decoration: none;
+    color: black;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-300px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInTop {
+    from {
+        opacity: 0;
+        transform: translateY(200px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

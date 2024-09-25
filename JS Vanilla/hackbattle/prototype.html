@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two Animations on Open and Scroll</title>
+    <style>
+        body {
+            height: 2000px;
+            /* For enabling scrolling */
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Styling the card */
+        .card {
+            width: 200px;
+            height: 100px;
+            background-color: lightblue;
+            border: 1px solid #ccc;
+            margin: 100px auto;
+            padding: 10px;
+            text-align: center;
+            line-height: 80px;
+            font-size: 18px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            /* Initially hidden */
+        }
+
+        /* Animation for page load */
+        .card.load-animation {
+            animation: fadeInUp 1s forwards;
+            /* Play fade-in animation when loaded */
+        }
+
+        /* Animation for scrolling */
+        .card.scroll-animation {
+            animation: scroll-watcher-to-right ;
+            animation-timing-function: cubic-bezier();
+            animation-timeline: scroll();
+        }
+
+        /* Keyframes for fade-in animation */
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(100px);
+                /* Starts below and fades in */
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+                /* Ends in normal position */
+            }
+        }
+
+        /* Keyframes for move-left animation */
+        @keyframes moveLeft {
+            from {
+
+                transform: translateX(0);
+                /* Start at normal position */
+            }
+
+            to {
+                transform: translateX(-200px);
+                /* Move left off the screen */
+            }
+
+        }
+
+        @keyframes scroll-watcher-to-right {
+            from {}
+
+            to {
+                transform: translateX(100px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Hidden card that will animate -->
+    <div class="card" id="myCard">I am a Card!</div>
+
+    <script>
+        // Get the card by its ID
+        const card = document.getElementById('myCard');
+
+        // Trigger the first animation when the page loads
+        window.addEventListener('load', function () {
+            card.classList.add('load-animation');
+        });
+
+        // Trigger the second animation when the user scrolls
+        window.addEventListener('scroll', function () {
+            const scrollPosition = window.scrollY;
+
+            // Trigger the scroll animation after scrolling past 400px
+            if (scrollPosition > 400) {
+                card.classList.add('scroll-animation');
+            }
+        });
+    </script>
+
+</body>
+
+</html>

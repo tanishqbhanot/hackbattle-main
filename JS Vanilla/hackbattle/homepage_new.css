@@ -184,8 +184,7 @@ body {
 .scan-card,
 .game-card,
 .history-card,
-.maps-card,
-a {
+.maps-card {
     background: transparent;
     display: grid;
     grid-template-columns: 3fr 10fr 3fr;
@@ -243,6 +242,7 @@ a {
     text-align: center;
 }
 
+
 .scan-title {
     text-align: center;
     color: white;
@@ -260,7 +260,10 @@ a {
 .scan-body {
     display: grid;
     grid-template-rows: 1fr 1fr;
+
 }
+
+
 
 .qr {
     margin-top: 100px;

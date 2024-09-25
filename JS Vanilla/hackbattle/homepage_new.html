@@ -20,11 +20,11 @@
                 <div class="socials">
                     <div class="empty1"></div>
                     <div class="instagram">
-                        <div><img class="inst" src="hackbattle/images/instafinal.png"></div>
+                        <div><img class="inst" src="images/instafinal.png"></div>
                     </div>
-                    <div class="linked-in"><img class="disc" src="hackbattle/images/linkedinfinal.png"></div>
+                    <div class="linked-in"><img class="disc" src="images/linkedinfinal.png"></div>
                     <div class="discord">
-                        <div class="in"><img src="hackbattle/images/discord-resize.png"></div>
+                        <div class="in"><img src="images/discord-resize.png"></div>
                     </div>
 
                 </div>
@@ -67,9 +67,12 @@
                     <div class="scan-card-actual">
                         <div></div>
                         <div class="scan-card-baby">
-                            <div class="scan-title">SCAN</div>
+                            <div class="scan-title">
+                                <button id="openCamera">SCAN</button>
+
+                            </div>
                             <div class="scan-body">
-                                <a href="" class="qr"><img src=""></a>
+                                <div class="qr"><img src="images/qr_resized.webp"></div>
                                 <div></div>
                             </div>
                         </div>
@@ -83,7 +86,7 @@
                     <div class="test1"></div>
                     <div class="game-card-actual">
                         <div></div>
-                        <a class="game-card-baby" href="game.html"></a>
+                        <div class="game-card-baby"></div>
                         <div></div>
                     </div>
                     <div class="test2"></div>
@@ -99,7 +102,7 @@
                     <div class="test1"></div>
                     <div class="history-card-actual">
                         <div></div>
-                        <a class="history-card-baby" href="public/history.html"></a>
+                        <div class="history-card-baby"></div>
                         <div></div>
                     </div>
                     <div class="test2"></div>
@@ -110,7 +113,7 @@
                     <div class="test1"></div>
                     <div class="maps-card-actual">
                         <div></div>
-                        <a class="maps-card-baby" href="index.ejs"></a>
+                        <div class="maps-card-baby"></div>
                         <div></div>
                     </div>
                     <div class="test2"></div>
@@ -124,5 +127,25 @@
     </div>
 
 </body>
+
+<script>
+    function openCamera() {
+        // Create an input element for file selection (camera access)
+        var input = document.createElement('input');
+        input.type = 'file';
+        input.accept = 'image/*';
+        input.capture = 'camera'; // Use the mobile camera directly
+
+        // Programmatically click the input to trigger camera
+        input.click();
+
+        // Handle the file when selected or captured
+        input.onchange = function (event) {
+            var file = event.target.files[0]; // Access the captured image
+            console.log(file);
+            // You can process the file, e.g., upload or display it
+        };
+    }
+</script>
 
 </html>
