@@ -172,6 +172,11 @@
   color: black;
 }
 
+.abcd{
+  color: white;
+  text-decoration: none;
+}
+
 @keyframes slideInLeft {
   from {
       opacity: 0;

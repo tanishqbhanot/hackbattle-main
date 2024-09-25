@@ -1,0 +1,110 @@
+
+.title{
+    display:grid;
+    grid-template-columns: 1fr;
+    font-size:70px;
+    text-align: center;
+    color:white;
+}
+html{
+    background-color: rgb(191,225,237);
+}
+.table{
+    display:grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    color:white;
+    text-align: center;
+
+}
+.table{
+    background-color: rgb(102,194,197);
+}
+.rows{
+    display:grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    color:white;
+    padding-bottom: 5px;
+    text-align: center;
+}
+.s_btn{
+    border:none;
+
+}
+.dnt,.stat,.distance,.cost{
+    font-size:30px;
+}
+.blank{
+    color:rgb(191,225,227);
+}
+.onoffswitch1,.onoffswitch2,.onoffswitch3,.onoffswitch4,.onoffswitch5 {
+    padding-left: 25%;
+    position: relative; width: 90px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+.onoffswitch-checkbox1,.onoffswitch-checkbox2,.onoffswitch-checkbox3,.onoffswitch-checkbox4,.onoffswitch-checkbox5 {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+.onoffswitch-label1,.onoffswitch-label2,.onoffswitch-label3,.onoffswitch-label4,.onoffswitch-label5 {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 2px solid #999999; border-radius: 20px;
+}
+.onoffswitch-inner1,.onoffswitch-inner2,.onoffswitch-inner3,.onoffswitch-inner4,.onoffswitch-inner5 {
+    display: block; width: 200%; margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner1:before,.onoffswitch-inner2:before,.onoffswitch-inner3:before,.onoffswitch-inner4:before,.onoffswitch-inner5:before, .onoffswitch-inner1:after, .onoffswitch-inner2:after, .onoffswitch-inner3:after, .onoffswitch-inner4:after, .onoffswitch-inner5:after {
+    display: block; float: left; width: 50%; height: 30px; padding: 0; line-height: 30px;
+    font-size: 14px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    box-sizing: border-box;
+}
+.onoffswitch-inner1:before,.onoffswitch-inner2:before ,.onoffswitch-inner3:before ,.onoffswitch-inner4:before ,.onoffswitch-inner5:before  {
+    content: "Paid";
+    padding-right: 20px;
+    background-color:rgb(102, 194, 197); color: #FFFFFF;
+}
+.onoffswitch-inner1:after,.onoffswitch-inner2:after,.onoffswitch-inner3:after,.onoffswitch-inner4:after,.onoffswitch-inner5:after {
+    content: "Ride";
+    padding-right:10px;
+    background-color: #EEEEEE; color: #999999;
+    text-align: right;
+}
+.onoffswitch-switch1,.onoffswitch-switch2,.onoffswitch-switch3,.onoffswitch-switch4,.onoffswitch-switch5 {
+    display: block; width: 18px; margin: 6px;
+    background: #FFFFFF;
+    position: absolute; top: 0; bottom: 0;
+    right: 56px;
+    border: 2px solid #999999; border-radius: 20px;
+    transition: all 0.3s ease-in 0s; 
+}
+.onoffswitch-checkbox1:checked + .onoffswitch-label1 .onoffswitch-inner1 {
+    margin-left: 0;
+}
+.onoffswitch-checkbox2:checked + .onoffswitch-label2 .onoffswitch-inner2 {
+    margin-left: 0;
+}
+.onoffswitch-checkbox3:checked + .onoffswitch-label3 .onoffswitch-inner3 {
+    margin-left: 0;
+}
+.onoffswitch-checkbox4:checked + .onoffswitch-label4 .onoffswitch-inner4 {
+    margin-left: 0;
+}
+.onoffswitch-checkbox5:checked + .onoffswitch-label5 .onoffswitch-inner5 {
+    margin-left: 0;
+}
+.onoffswitch-checkbox1:checked + .onoffswitch-label1 .onoffswitch-switch1 {
+    right: 0px; 
+}
+.onoffswitch-checkbox2:checked + .onoffswitch-label2 .onoffswitch-switch2 {
+    right: 0px; 
+}
+.onoffswitch-checkbox3:checked + .onoffswitch-label3 .onoffswitch-switch3 {
+    right: 0px; 
+}
+.onoffswitch-checkbox4:checked + .onoffswitch-label4 .onoffswitch-switch4 {
+    right: 0px; 
+}
+.onoffswitch-checkbox5:checked + .onoffswitch-label5 .onoffswitch-switch5 {
+    right: 0px; 
+}
